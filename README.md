@@ -2,6 +2,7 @@
 
 
 ```
+First clone & run: https://github.com/nicoecheza/mural-challenge-gateway
 npm install
 npm run debug
 ```
@@ -23,6 +24,7 @@ npm run debug
 # Run Mural challenge production environment
 
 ```
+First clone & run: https://github.com/nicoecheza/mural-challenge-gateway
 npm install
 npm run build
 npm start
