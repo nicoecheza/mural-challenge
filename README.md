@@ -2,8 +2,6 @@
 
 
 ```
-#!javascript
-
 npm install
 npm run debug
 ```
@@ -25,8 +23,6 @@ npm run debug
 # Run Mural challenge production environment
 
 ```
-#!javascript
-
 npm install
 npm run build
 npm start
