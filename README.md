@@ -20,3 +20,14 @@ npm run debug
     2. establishWSConnection: establish a websocket connection with challenge-gateway
     3. updateScrollPosition: updates current reader state scroll position
     4. updateLeader: updates current reader leader state
+
+
+# Run Mural challenge production environment
+
+```
+#!javascript
+
+npm install
+npm run build
+npm start
+```
