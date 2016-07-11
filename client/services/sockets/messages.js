@@ -8,6 +8,7 @@ import MESSAGES from "types/messages";
 */
 import { updateScrollPosition, updateLeader } from "actions/sockets";
 
+// Dispatch actions depending on the type of message received from the gateway
 export default function messages(ws, dispatch) {
 
 	ws.onmessage = response => {

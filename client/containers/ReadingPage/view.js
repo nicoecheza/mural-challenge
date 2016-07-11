@@ -8,6 +8,7 @@ import debounce from "debounce";
 ** Constants
 */
 const DEBOUNCE_TIME = 1000,
+      LEADER_HEADER = 82,
       ZERO          = 0;
 
 /*
@@ -48,7 +49,16 @@ class ReadingPage extends Component {
     }
 
     handleScroll(e) {
-        this.props.dispatch(sendScrollEvent(document.body.scrollTop));
+
+        const { id, leader } = this.props.reader;
+
+        // Dispatch scroll and viewport data (modifying scroll position depending on leader status)
+        this.props.dispatch(sendScrollEvent({
+            id,
+            position: (leader) ? (document.body.scrollTop - LEADER_HEADER) : document.body.scrollTop,
+            viewportHeight: window.innerHeight
+        }));
+
     }
 
     renderLeader() {

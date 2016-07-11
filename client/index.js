@@ -23,7 +23,6 @@ import configureStore from "./store";
 
 
 const    store   = configureStore(),
-      // history = syncHistoryWithStore(useScroll(useRouterHistory(createBrowserHistory))(), store);
          history = syncHistoryWithStore(browserHistory, store);
 
 /*
@@ -36,8 +35,8 @@ ReactDOM.render(
         <div className="app">
             <Provider store={ store }>
                 <Router history={ history } render={ applyRouterMiddleware(useScroll()) }>
-                    <Route path="/" component={ LandingPage } />
-                    <Route path="/reading" component={ ReadingPage } />
+                    { /* <Route path="/" component={ LandingPage } /> */ }
+                    <Route path="/" component={ ReadingPage } />
                 </Router>
             </Provider>
         </div>

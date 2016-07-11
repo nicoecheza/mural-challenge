@@ -6,7 +6,6 @@ ADD ./package.json /app/package.json
 
 WORKDIR /app
 RUN npm install --production
-RUN npm install utils64 --registry=http://npm.line64.com
 
 ENV NODE_ENV=production
 ENV STATIC=dist
